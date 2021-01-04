@@ -14,11 +14,12 @@ public class DynamiqueClient {
 		// set security manager
 		if (System.getSecurityManager() == null) {
 			System.setSecurityManager(new SecurityManager());
+
 		}
 
 	Properties p = System.getProperties();
 	String url = p.getProperty("java.rmi.server.www");
-	Class ClasseClient = RMIClassLoader.loadClass(url,"www.MatrixPClient");
+	Class ClasseClient = RMIClassLoader.loadClass(url,"www.Client");
 		ClasseClient.getConstructors()[0].newInstance(); // new Client();
 
 	}

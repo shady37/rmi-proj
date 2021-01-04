@@ -16,7 +16,7 @@ public class DynamicProduitServer {
 		}
 		// code loading
 		String url = System.getProperty("java.rmi.server.www");
-		Class ClasseServeur = RMIClassLoader.loadClass(url, "www.FabImp");
+		Class ClasseServeur = RMIClassLoader.loadClass(url, "www.Factory");
 		Remote factory = (Remote) ClasseServeur.getConstructors()[0].newInstance();
 
 		// registry
